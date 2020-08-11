@@ -16,7 +16,7 @@ def predict():
     features_value = [np.array(input_features)]
     
     features_name = ['clump_thickness', 'cell_size', 'cell_shape', 'marginal_adhesion', 
-	'single_epithelial_size', 'bare_nuclei','bland_chromatin','normal_nucleoli']
+	'single_epithelial_size', 'bare_nuclei','bland_chromatin','normal_nucleoli','mitoses']
     
     df = pd.DataFrame(features_value, columns=features_name)
     output = model.predict(df)
