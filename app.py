@@ -4,7 +4,7 @@ from flask import Flask, request, render_template
 import pickle
 
 app = Flask(__name__)
-model = pickle.load(open('model_breast_cancer_detector.pickle', 'rb'))
+model = pickle.load(open('model_breast_cancer_detector.pkl', 'rb'))
 
 @app.route('/')
 def home():
@@ -27,7 +27,7 @@ def predict():
         res_val = " No Breast Cancer"
         
 
-    return render_template('index.html', prediction_text='ML algo says{}'.format(res_val))
+    return render_template('index.html', prediction_text='ML algorithm predicts{}'.format(res_val))
 
 if __name__ == "__main__":
     app.run()
