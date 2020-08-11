@@ -1,0 +1,68 @@
+2020-08-11T16:05:00.829320+00:00 app[web.1]:     y = super().predict(X)
+2020-08-11T16:05:00.829320+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/sklearn/svm/_base.py", line 335, in predict
+2020-08-11T16:05:00.829321+00:00 app[web.1]:     return predict(X)
+2020-08-11T16:05:00.829321+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/sklearn/svm/_base.py", line 355, in _dense_predict
+2020-08-11T16:05:00.829322+00:00 app[web.1]:     self._probA, self._probB, svm_type=svm_type, kernel=kernel,
+2020-08-11T16:05:00.829328+00:00 app[web.1]: AttributeError: 'SVC' object has no attribute '_probA'
+2020-08-11T16:05:00.830308+00:00 app[web.1]: 10.45.47.90 - - [11/Aug/2020:16:05:00 +0000] "POST /predict HTTP/1.1" 500 290 "https://breast-cancer-detection-api.herokuapp.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0) Gecko/20100101 Firefox/71.0"
+2020-08-11T16:05:00.837766+00:00 heroku[router]: at=info method=POST path="/predict" host=breast-cancer-detection-api.herokuapp.com request_id=a2704c31-7e5d-4fac-84da-7570e6d55f73 fwd="124.40.247.87" dyno=web.1 connect=1ms service=9ms status=500 bytes=455 protocol=https
+2020-08-11T16:05:01.278148+00:00 app[web.1]: 10.45.47.90 - - [11/Aug/2020:16:05:01 +0000] "GET /favicon.ico HTTP/1.1" 404 232 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0) Gecko/20100101 Firefox/71.0"
+2020-08-11T16:05:01.278300+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=breast-cancer-detection-api.herokuapp.com request_id=49fc8b92-de88-42d0-a729-8e37d36d419b fwd="124.40.247.87" dyno=web.1 connect=1ms service=3ms status=404 bytes=385 protocol=https
+2020-08-11T16:11:15.000000+00:00 app[api]: Build started by user prathibhar007@gmail.com
+2020-08-11T16:12:17.075311+00:00 heroku[web.1]: Restarting
+2020-08-11T16:12:17.077214+00:00 heroku[web.1]: State changed from up to starting
+2020-08-11T16:12:16.845393+00:00 app[api]: Release v11 created by user prathibhar007@gmail.com
+2020-08-11T16:12:16.845393+00:00 app[api]: Deploy 039d6dc0 by user prathibhar007@gmail.com
+2020-08-11T16:12:18.667193+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2020-08-11T16:12:18.706566+00:00 app[web.1]: [2020-08-11 16:12:18 +0000] [4] [INFO] Handling signal: term
+2020-08-11T16:12:18.707165+00:00 app[web.1]: [2020-08-11 16:12:18 +0000] [18] [INFO] Worker exiting (pid: 18)
+2020-08-11T16:12:18.707425+00:00 app[web.1]: [2020-08-11 16:12:18 +0000] [10] [INFO] Worker exiting (pid: 10)
+2020-08-11T16:12:19.419813+00:00 app[web.1]: [2020-08-11 16:12:19 +0000] [4] [INFO] Shutting down: Master
+2020-08-11T16:12:19.533054+00:00 heroku[web.1]: Process exited with status 0
+2020-08-11T16:12:33.572889+00:00 heroku[web.1]: Starting process with command `gunicorn app:app`
+2020-08-11T16:12:36.395800+00:00 app[web.1]: [2020-08-11 16:12:36 +0000] [4] [INFO] Starting gunicorn 19.9.0
+2020-08-11T16:12:36.396371+00:00 app[web.1]: [2020-08-11 16:12:36 +0000] [4] [INFO] Listening at: http://0.0.0.0:59915 (4)
+2020-08-11T16:12:36.396459+00:00 app[web.1]: [2020-08-11 16:12:36 +0000] [4] [INFO] Using worker: sync
+2020-08-11T16:12:36.400583+00:00 app[web.1]: [2020-08-11 16:12:36 +0000] [10] [INFO] Booting worker with pid: 10
+2020-08-11T16:12:36.417888+00:00 app[web.1]: [2020-08-11 16:12:36 +0000] [11] [INFO] Booting worker with pid: 11
+2020-08-11T16:12:37.985341+00:00 heroku[web.1]: State changed from starting to up
+2020-08-11T16:12:42.758815+00:00 app[web.1]: /app/.heroku/python/lib/python3.6/site-packages/sklearn/base.py:334: UserWarning: Trying to unpickle estimator SVC from version 0.22.2.post1 when using version 0.23.2. This might lead to breaking code or invalid results. Use at your own risk.
+2020-08-11T16:12:42.758849+00:00 app[web.1]:   UserWarning)
+2020-08-11T16:12:42.760747+00:00 app[web.1]: /app/.heroku/python/lib/python3.6/site-packages/sklearn/base.py:334: UserWarning: Trying to unpickle estimator SVC from version 0.22.2.post1 when using version 0.23.2. This might lead to breaking code or invalid results. Use at your own risk.
+2020-08-11T16:12:42.760748+00:00 app[web.1]:   UserWarning)
+2020-08-11T16:12:53.000000+00:00 app[api]: Build succeeded
+2020-08-11T16:13:11.449721+00:00 heroku[router]: at=info method=GET path="/" host=breast-cancer-detection-api.herokuapp.com request_id=a9696d2e-0035-4bdd-8b1d-e714c955d09d fwd="124.40.247.87" dyno=web.1 connect=1ms service=15ms status=200 bytes=2562 protocol=https
+2020-08-11T16:13:11.449209+00:00 app[web.1]: 10.31.64.150 - - [11/Aug/2020:16:13:11 +0000] "GET / HTTP/1.1" 200 2400 "https://dashboard.heroku.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0) Gecko/20100101 Firefox/71.0"
+2020-08-11T16:13:12.359749+00:00 heroku[router]: at=info method=GET path="/static_images/bcd2.png" host=breast-cancer-detection-api.herokuapp.com request_id=8a517987-11d0-4c10-9687-3c198f54fbf3 fwd="124.40.247.87" dyno=web.1 connect=1ms service=34ms status=404 bytes=385 protocol=https
+2020-08-11T16:13:12.358104+00:00 app[web.1]: 10.31.64.150 - - [11/Aug/2020:16:13:12 +0000] "GET /static_images/bcd2.png HTTP/1.1" 404 232 "https://breast-cancer-detection-api.herokuapp.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0) Gecko/20100101 Firefox/71.0"
+2020-08-11T16:13:12.935559+00:00 heroku[router]: at=info method=GET path="/static_images/breast-cancer.png" host=breast-cancer-detection-api.herokuapp.com request_id=0a0fbd51-afb2-4c49-bc59-77dd6b4789c2 fwd="124.40.247.87" dyno=web.1 connect=1ms service=7ms status=404 bytes=385 protocol=https
+2020-08-11T16:13:12.927859+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=breast-cancer-detection-api.herokuapp.com request_id=e6b147c4-4300-46ea-96f6-8341baa53ea1 fwd="124.40.247.87" dyno=web.1 connect=0ms service=3ms status=404 bytes=385 protocol=https
+2020-08-11T16:13:12.926946+00:00 app[web.1]: 10.31.64.150 - - [11/Aug/2020:16:13:12 +0000] "GET /favicon.ico HTTP/1.1" 404 232 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0) Gecko/20100101 Firefox/71.0"
+2020-08-11T16:13:12.934263+00:00 app[web.1]: 10.155.219.74 - - [11/Aug/2020:16:13:12 +0000] "GET /static_images/breast-cancer.png HTTP/1.1" 404 232 "https://breast-cancer-detection-api.herokuapp.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0) Gecko/20100101 Firefox/71.0"
+2020-08-11T16:13:38.049148+00:00 app[web.1]: [2020-08-11 16:13:38,046] ERROR in app: Exception on /predict [POST]
+2020-08-11T16:13:38.049162+00:00 app[web.1]: Traceback (most recent call last):
+2020-08-11T16:13:38.049164+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+2020-08-11T16:13:38.049164+00:00 app[web.1]:     response = self.full_dispatch_request()
+2020-08-11T16:13:38.049166+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+2020-08-11T16:13:38.049166+00:00 app[web.1]:     rv = self.handle_user_exception(e)
+2020-08-11T16:13:38.049355+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+2020-08-11T16:13:38.049360+00:00 app[web.1]:     reraise(exc_type, exc_value, tb)
+2020-08-11T16:13:38.049360+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+2020-08-11T16:13:38.049361+00:00 app[web.1]:     raise value
+2020-08-11T16:13:38.049361+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+2020-08-11T16:13:38.049361+00:00 app[web.1]:     rv = self.dispatch_request()
+2020-08-11T16:13:38.049362+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+2020-08-11T16:13:38.049363+00:00 app[web.1]:     return self.view_functions[rule.endpoint](**req.view_args)
+2020-08-11T16:13:38.049364+00:00 app[web.1]:   File "/app/app.py", line 22, in predict
+2020-08-11T16:13:38.049364+00:00 app[web.1]:     output = model.predict(df)
+2020-08-11T16:13:38.049364+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/sklearn/svm/_base.py", line 615, in predict
+2020-08-11T16:13:38.049365+00:00 app[web.1]:     y = super().predict(X)
+2020-08-11T16:13:38.049365+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/sklearn/svm/_base.py", line 335, in predict
+2020-08-11T16:13:38.049365+00:00 app[web.1]:     return predict(X)
+2020-08-11T16:13:38.049366+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/sklearn/svm/_base.py", line 355, in _dense_predict
+2020-08-11T16:13:38.049366+00:00 app[web.1]:     self._probA, self._probB, svm_type=svm_type, kernel=kernel,
+2020-08-11T16:13:38.049377+00:00 app[web.1]: AttributeError: 'SVC' object has no attribute '_probA'
+2020-08-11T16:13:38.065157+00:00 app[web.1]: 10.155.219.74 - - [11/Aug/2020:16:13:38 +0000] "POST /predict HTTP/1.1" 500 290 "https://breast-cancer-detection-api.herokuapp.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0) Gecko/20100101 Firefox/71.0"
+2020-08-11T16:13:38.066820+00:00 heroku[router]: at=info method=POST path="/predict" host=breast-cancer-detection-api.herokuapp.com request_id=d3e4672c-c424-4171-80c3-54eee6a9ddba fwd="124.40.247.87" dyno=web.1 connect=1ms service=33ms status=500 bytes=455 protocol=https
+2020-08-11T16:13:43.884822+00:00 app[web.1]: 10.155.219.74 - - [11/Aug/2020:16:13:43 +0000] "GET / HTTP/1.1" 200 2400 "https://dashboard.heroku.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0) Gecko/20100101 Firefox/71.0"
+2020-08-11T16:13:43.887175+00:00 heroku[router]: at=info method=GET path="/" host=breast-cancer-detection-api.herokuapp.com request_id=7d538ea0-fcf0-47ed-a5a6-60b6b9e3ff21 fwd="124.40.247.87" dyno=web.1 connect=1ms service=18ms status=200 bytes=2562 protocol=https
