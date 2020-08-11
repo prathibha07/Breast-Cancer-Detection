@@ -1,4 +1,4 @@
-!-- This is GUI for Breast Cancer Detection Application Using Machine Learning Classifer -->
+!-- GUI for Breast Cancer Detection Application using ML classifier-->
 
 <!DOCTYPE html>
 <html >
@@ -39,7 +39,7 @@
 
 <body>
 
-  <!-- Show Indian AI Hospital banner-->
+  <!-- background-->
   <div>
     <img src="static_images/bcd2.png" class="w3-border w3-padding" alt="Breast Cancer Detection" style="width:100%">
   </div>
@@ -47,26 +47,28 @@
  
  <div class="login">
 	
-    <!-- Get input for predict the cancer -->
+    <!-- Get input to predict cancer -->
     <center>
     <form action="{{ url_for('predict')}}"method="post">
-        <h1>Enter the value of tumor features >>></h1>
-        
+        <h1>Enter the value of tumor features below >>></h1>
+        <!-- <input type="text" name="comment"/> -->
     	<input type="text" name="clump_thickness" placeholder="Clump Thickness" required="required" />
         <input type="text" name="cell_size" placeholder="Cell Size" required="required" />
-		<input type="text" name="cell_shape" placeholder="Cell Shape" required="required" />
-		<input type="text" name="marginal_adhesion" placeholder="Marginal Adhesion" required="required" />
-		<input type="text" name="single_epithelial_size" placeholder="Single Epithelial size" required="required" />
-		<input type="text" name="bare_nuclei" placeholder="Bare Nuclei" required="required" />
-		<input type="text" name="bland_chromatin" placeholder="Bland Chromatin" required="required" />
-		<input type="text" name="normal_nucleoli" placeholder="Normal Nucleoli" required="required" />
-		<br>
+	<input type="text" name="cell_shape" placeholder="Cell Shape" required="required" />
+	<input type="text" name="marginal_adhesion" placeholder="Marginal Adhesion" required="required" />
+	<input type="text" name="single_epithelial_size" placeholder="Single Epithelial size" required="required" />
+	<input type="text" name="bare_nuclei" placeholder="Bare Nuclei" required="required" />
+	<input type="text" name="bland_chromatin" placeholder="Bland Chromatin" required="required" />
+	<input type="text" name="normal_nucleoli" placeholder="Normal Nucleoli" required="required" />
+	<br>
         <br>
         
+	<input type="submit" class="btn-info" value="Perform Prediction">
         <!-- Show button -->
-        <div class="button_cont" align="center"><a class="button_css" href="http://bit.ly/breast-cancer-ml-project" target="_blank" rel="nofollow noopener">
-            <button type="submit" class="btn btn-primary btn-block btn-large"><strong>Perform Prediction</strong></button></a>
-        </div>
+        <!--div class="button_cont" align="center"><a class="button_css" href="http://bit.ly/breast-cancer-ml-project" target="_blank" rel="nofollow noopener">
+        <!--button type="submit" class="btn btn-primary btn-block btn-large"><strong>Perform Prediction</strong></button></a>
+
+   </div>
         
     </form>
     </center>
