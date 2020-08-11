@@ -49,8 +49,8 @@
 	
     <!-- Get input to predict cancer -->
     <center>
-    <form action="{{ url_for('predict')}}"method="post">
-        <h1>Enter the value of tumor features below >>></h1>
+    <form action="{{ url_for('predict')}}"method="POST">
+        <h1>Enter the value of tumor features (between 1-10) >>></h1>
         <!-- <input type="text" name="comment"/> -->
     	<input type="text" name="clump_thickness" placeholder="Clump Thickness" required="required" />
         <input type="text" name="cell_size" placeholder="Cell Size" required="required" />
