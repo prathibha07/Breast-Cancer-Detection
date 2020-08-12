@@ -1,4 +1,4 @@
-!-- GUI for Breast Cancer Detection using KNN classifier-->
+<!-- GUI for Breast Cancer Detection using KNN classifier-->
 
 <!DOCTYPE html>
 <html >
@@ -9,7 +9,7 @@
   <style>
     /* CSS code for button */
     body {
-      background-image: url('static_images/breast-cancer.png');
+      background-image: url('static/breast-cancer.png');
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
@@ -41,42 +41,32 @@
 
   <!-- background-->
   <div>
-    <img src="static_images/bcd2.png" class="w3-border w3-padding" alt="Breast Cancer Detection" style="width:100%">
+    <img src="static/bcd2.png" class="w3-border w3-padding" alt="Breast Cancer Detection" style="width:100%">
   </div>
  
  
  <div class="login">
 	
     <!-- Get input to predict cancer -->
-    <center>
-    <form action="{{ url_for('predict')}}"method="POST">
-        <h1>Enter the value of tumor features (between 1-10) >>></h1>
+
+    <h1>Enter the value of tumor features (between 1-10) >>></h1>
+    <form action="{{ url_for('predict')}}" method="POST">
         <!-- <input type="text" name="comment"/> -->
-    	<input type="text" name="clump_thickness" placeholder="Clump Thickness" required="required" />
-        <input type="text" name="cell_size" placeholder="Cell Size" required="required" />
-	<input type="text" name="cell_shape" placeholder="Cell Shape" required="required" />
-	<input type="text" name="marginal_adhesion" placeholder="Marginal Adhesion" required="required" />
-	<input type="text" name="single_epithelial_size" placeholder="Single Epithelial size" required="required" />
-	<input type="text" name="bare_nuclei" placeholder="Bare Nuclei" required="required" />
-	<input type="text" name="bland_chromatin" placeholder="Bland Chromatin" required="required" />
-	<input type="text" name="normal_nucleoli" placeholder="Normal Nucleoli" required="required" />
-	<input type="text" name="mitoses" placeholder="Mitoses" required="required" />   
-	<br>
-        <br>
-        
-	<input type="submit" class="btn-info" value="Perform Prediction">
-       
-        
-   </div>
-        
+    	<input type="text" name="clump_thickness" placeholder="Clump Thickness" required="required" /><br>
+      <input type="text" name="cell_size" placeholder="Cell Size" required="required" /><br>
+      <input type="text" name="cell_shape" placeholder="Cell Shape" required="required" /><br>
+      <input type="text" name="marginal_adhesion" placeholder="Marginal Adhesion" required="required" /><br>
+      <input type="text" name="single_epithelial_size" placeholder="Single Epithelial size" required="required" /><br>
+      <input type="text" name="bare_nuclei" placeholder="Bare Nuclei" required="required" /><br>
+      <input type="text" name="bland_chromatin" placeholder="Bland Chromatin" required="required" /><br>
+      <input type="text" name="normal_nucleoli" placeholder="Normal Nucleoli" required="required" /><br>
+      <input type="text" name="mitoses" placeholder="Mitoses" required="required" />  <br> 
+	    <input type="submit" class="btn-info" value="Perform Prediction">
     </form>
-    </center>
    
    <!-- Show predicted output using ML model --> 
    <div>
-       <center>
    <h1>{{ prediction_text }}</h1>
-       </center>
    </div>
 
  </div>
