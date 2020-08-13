@@ -8,13 +8,13 @@
 
   <style>
     /* CSS code for button */
-    fixed-bg {
+    body {
       height: 250px;
       background-image: url('static/breast-cancer1.png');
       background-color: #FFC0CB; 
       background-repeat: no-repeat;
       background-attachment:scroll;
-      background-position:right top;
+      background-position: right top;
 	     }
 
     /* CSS code for button */
@@ -44,10 +44,7 @@
  <div class="login">
 	
     <!-- Get input to predict cancer -->
-    <p> <strong> </h1> BREAST CANCER DETECTION USING MACHINE LEARNING  </strong> </h1></p>
-    
-
-
+	 <p> <strong> </h1> BREAST CANCER DETECTION USING MACHINE LEARNING  </strong> </h1></p>
 <!--div style="height:300px;background-color:#DB7093;"-->
     <div>
     <form action="{{ url_for('predict')}}" method="POST">
