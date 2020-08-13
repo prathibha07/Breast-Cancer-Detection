@@ -8,13 +8,13 @@
 
   <style>
     /* CSS code for button */
-    body {
+    fixed-bg {
       height: 250px;
       background-image: url('static/breast-cancer1.png');
-      background-color: #FFC0CB;
+      background-color: #FFC0CB; 
       background-repeat: no-repeat;
-      background-attachment: scroll;
-      background-position: center;
+      background-attachment:scroll;
+      background-position:right top;
 	     }
 
     /* CSS code for button */
@@ -46,9 +46,10 @@
     <!-- Get input to predict cancer -->
     <p> <strong> </h1> BREAST CANCER DETECTION USING MACHINE LEARNING  </strong> </h1></p>
     
-</div>
 
-<div style="height:300px;background-color:#FFDAB9;">
+
+<!--div style="height:300px;background-color:#DB7093;"-->
+    <div>
     <form action="{{ url_for('predict')}}" method="POST">
         <!-- <input type="text" name="comment"/> -->
       <p> <strong> Enter the value of tumor features (between 1-10) </strong> </p>
