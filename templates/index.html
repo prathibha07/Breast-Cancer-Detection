@@ -9,8 +9,8 @@
   <style>
     /* CSS code for button */
     body {
-      height: 200px;
-      background-image: url('static/bcd2.png');
+      height: 300px;
+      background-image: url('static/breast-cancer1.png');
       background-color: #cccccc;
       background-repeat: no-repeat;
       background-attachment: fixed;
@@ -42,20 +42,15 @@
 </head>
 
 <body>
-
-  <!-- background-->
-  <div>
-    <img src="static/breast-cancer.png" class="w3-border w3-padding" alt="Breast Cancer Detection" style="width:100%">
-  </div>
- 
  
  <div class="login">
 	
     <!-- Get input to predict cancer -->
-
+	<p> <strong> BREAST CANCER DETECTION USING MACHINE LEARNING,</strong></p>
     <h1>Enter the value of tumor features (between 1-10) >>></h1>
     <form action="{{ url_for('predict')}}" method="POST">
         <!-- <input type="text" name="comment"/> -->
+	    
     	<input type="text" name="clump_thickness" placeholder="Clump Thickness" required="required" /><br>
       <input type="text" name="cell_size" placeholder="Cell Size" required="required" /><br>
       <input type="text" name="cell_shape" placeholder="Cell Shape" required="required" /><br>
