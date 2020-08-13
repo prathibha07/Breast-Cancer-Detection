@@ -9,11 +9,12 @@
   <style>
     /* CSS code for button */
     body {
-      height: 500px;
+      height: 250px;
       background-image: url('static/breast-cancer1.png');
-      background-color: #FFB6C1;
+      background-color: #FFC0CB;
       background-repeat: no-repeat;
-      background-attachment: fixed;
+      background-attachment: scroll;
+      background-position: center;
 	     }
 
     /* CSS code for button */
@@ -43,12 +44,15 @@
  <div class="login">
 	
     <!-- Get input to predict cancer -->
-	<p> <strong> </h1> BREAST CANCER DETECTION USING MACHINE LEARNING  </strong> </h1></p>
-    <p> <strong> Enter the value of tumor features (between 1-10) </strong> </p>
+    <p> <strong> </h1> BREAST CANCER DETECTION USING MACHINE LEARNING  </strong> </h1></p>
+    
+</div>
+
+<div style="height:300px;background-color:#FFDAB9;">
     <form action="{{ url_for('predict')}}" method="POST">
         <!-- <input type="text" name="comment"/> -->
-	    
-    	<input type="text" name="clump_thickness" placeholder="Clump Thickness" required="required" /><br>
+      <p> <strong> Enter the value of tumor features (between 1-10) </strong> </p>
+      <input type="text" name="clump_thickness" placeholder="Clump Thickness" required="required" /><br>
       <input type="text" name="cell_size" placeholder="Cell Size" required="required" /><br>
       <input type="text" name="cell_shape" placeholder="Cell Shape" required="required" /><br>
       <input type="text" name="marginal_adhesion" placeholder="Marginal Adhesion" required="required" /><br>
@@ -57,7 +61,7 @@
       <input type="text" name="bland_chromatin" placeholder="Bland Chromatin" required="required" /><br>
       <input type="text" name="normal_nucleoli" placeholder="Normal Nucleoli" required="required" /><br>
       <input type="text" name="mitoses" placeholder="Mitoses" required="required" />  <br> 
-	    <input type="submit" class="btn-info" value="Perform Prediction">
+      <input type="submit" class="btn-info" value="Perform Prediction">
     </form>
    
    <!-- Show predicted output using ML model --> 
