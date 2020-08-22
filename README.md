@@ -11,9 +11,9 @@ Link to the dataset -  http://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisc
 
 Blog on Deploying Flask app on Heruko - https://stackabuse.com/deploying-a-flask-application-to-heroku/
 
-Languages/Frameworks Used
+Languages/Frameworks Used -
 
-    Python: language
+    Python : language
     NumPy : library for numerical calculations
     Pandas : library for data manipulation and analysis
     SkLearn : library which features various classification, regression and clustering algorithms
