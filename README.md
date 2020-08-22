@@ -2,6 +2,7 @@
 
 
 An application for breast cancer detection. The web-app can tell whether the breast mass is benign(non-cancerous cells) or malignant(cancerous cells) through Machine Learning (KNN, model accracy- 95%)
+
 https://breast-cancer-detection-api.herokuapp.com/
 The attributes in the dataset are in the range(1-10). Enter the values of attributes and by clicking on the "predict" button can tell whether it's benign or malignant.
 
